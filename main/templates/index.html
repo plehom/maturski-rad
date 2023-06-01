@@ -1,0 +1,21 @@
+{%extends 'base.html'%}
+
+{%block 'main'%}
+<div id="container">
+    <div id="main">
+        <h2>Django Progresivna Web Aplikacija<h2>
+    </div>
+    <div id="posts-container">
+        AAAAAA
+        {% for post in object_list %}
+        <li class="post">
+            <h2>{{post.title}}</h2>
+            <p>{{post.description}}</p>
+        </li>
+        {%empty%}
+           <li>Nema Postova za sada</li> 
+        {%endfor%}
+    </div>
+</div>
+
+{%endblock%}
